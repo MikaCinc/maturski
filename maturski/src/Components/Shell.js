@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import AppBar from './AppBar';
 
+import DefaultData from '../Data/Default';
+
 import Start from '../Pages/Start';
 
 export default class Shell extends Component {
@@ -14,7 +16,7 @@ export default class Shell extends Component {
   renderPage() {
     switch(this.state.currentPage) {
       case "start": {
-        return <Start/>;
+        return <Start DefaultData={DefaultData}/>;
       }
       default: return <Start/>
     }
