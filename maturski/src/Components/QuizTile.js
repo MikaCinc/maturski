@@ -69,7 +69,7 @@ function MediaControlCard(props) {
           </Typography>
         </CardContent>
         <div className={classes.controls}>
-          <IconButton aria-label="Play">
+          <IconButton aria-label="Play" onClick={() => {props.onPlay(props.quiz.ID)}}>
             <PlayArrowIcon className={classes.playIcon} />
           </IconButton>
           <IconButton aria-label="Edit">

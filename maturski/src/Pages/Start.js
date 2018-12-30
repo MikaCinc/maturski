@@ -13,7 +13,10 @@ export default class Start extends Component {
           this.props.DefaultData.map((item) => {
             return (
               <Grid key={item.ID} item>
-                <QuizTile quiz={{ ...item }} />
+                <QuizTile
+                  quiz={{ ...item }}
+                  onPlay={this.props.handlePlay}
+                />
               </Grid>
             )
           })
